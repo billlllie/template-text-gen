@@ -3,9 +3,6 @@
     <h2>{{ $t("template.selectTemplate") }}</h2>
 
     <div class="template-actions">
-      <button class="action-button" @click="loadPredefinedTemplates">
-        {{ $t("template.loadPredefined") }}
-      </button>
       <label class="action-button upload-button">
         {{ $t("template.uploadTemplate") }}
         <input type="file" @change="handleFileUpload" accept=".json" hidden />
@@ -29,16 +26,16 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 import templateIndex from "@/data/templates/index";
 
 const router = useRouter();
-const templates = ref([]);
+const templates = ref(templateIndex);
 
-const loadPredefinedTemplates = () => {
+onMounted(() => {
   templates.value = templateIndex;
-};
+});
 
 const handleFileUpload = (event) => {
   const file = event.target.files[0];
