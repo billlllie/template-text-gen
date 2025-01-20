@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 /dist
-
+**/data/templates/**/*.json
 
 # local env files
 .env.local
