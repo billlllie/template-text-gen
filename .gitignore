@@ -2,6 +2,7 @@
 node_modules
 /dist
 **/data/templates/**/*.json
+coverage
 
 # local env files
 .env.local

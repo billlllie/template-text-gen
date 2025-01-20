@@ -8,7 +8,6 @@
         <input type="file" @change="handleFileUpload" accept=".json" hidden />
       </label>
     </div>
-
     <div class="template-list">
       <div
         v-for="template in templates"
@@ -31,7 +30,7 @@ import { useRouter } from "vue-router";
 import templateIndex from "@/data/templates/index";
 
 const router = useRouter();
-const templates = ref(templateIndex);
+const templates = ref([]);
 
 onMounted(() => {
   templates.value = templateIndex;

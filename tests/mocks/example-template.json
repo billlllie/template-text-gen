@@ -1,0 +1,25 @@
+{
+    "id": "example",
+    "name": "示例模板",
+    "description": "这是一个示例模板",
+    "sections": [
+        {
+            "type": "text",
+            "label": "提示词",
+            "placeholder": "请输入提示词",
+            "template": "提示词是：\n```\n{value}\n```"
+        },
+        {
+            "type": "textarea",
+            "label": "上下文信息",
+            "placeholder": "请输入上下文信息",
+            "template": "我的上下文信息是：\n```\n{value}\n```"
+        },
+        {
+            "type": "number",
+            "label": "字数限制",
+            "default": 500,
+            "template": "请根据我提供的内容生成英文写作，篇幅限制在{value}词以内。如果有需要追加的问题或者信息请向我了解更多。"
+        }
+    ]
+}
